@@ -1,10 +1,10 @@
 <h3>Panino:</h3>
 
-<span></span>
-<ul *ngFor="let i of panino">
-    <li> {{i.nome}}</li>
-    <li> {{i.prezzo}}</li>
+<div *ngFor=""></div>
+<ul *ngFor="let i of elencoIngredienti">
+    <li #nome> {{i.nome}}</li>
+    <li #prezzo> {{i.prezzo}}</li>
     <img [src]="i.img" alt="">
-    <button>+</button>
-    <button>-</button>
+    <button (click)="aggiungi(i.nome, i.prezzo)" > + </button>
+    <button> - </button>
 </ul>

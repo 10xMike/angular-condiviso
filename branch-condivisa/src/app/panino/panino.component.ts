@@ -9,13 +9,18 @@ import { Ingrediente } from '../models/ingrediente';
   styleUrls: ['./panino.component.css']
 })
 export class PaninoComponent implements OnInit {
-panino: Ingrediente[];
+elencoIngredienti: Ingrediente[];
+panino=[];
+display: string = ' ';
   constructor(private is: IngredientiService) {
-    this.panino=[];
+    this.elencoIngredienti=[];
    }
 
   ngOnInit(): void {
-    this.panino= this.is.getElement();
+    this.elencoIngredienti= this.is.getElement();
   }
-
+aggiungi(nome:any, prezzo:any):void{
+    this.elencoIngredienti.push(nome, prezzo)
+      
+}
 }

@@ -10,4 +10,5 @@ export class IngredientiService {
   getElement(){
     return ingredienti
   }
+
 }
